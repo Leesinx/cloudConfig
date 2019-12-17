@@ -1,0 +1,17 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: eureka-client-2
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaServerA:8761/eureka/ #,http://eurekaServerB:8762/eureka/,http://eurekaServerC:8763/eureka/
+
+
+#  instance:
+#    instance-id: ${spring.application.name}:${server.port} #自定义注册实例名称 默认的是 主机名+IP+端口
+feign:
+  hystrix:
+    enabled: true
+#    prefer-ip-address: true #使用主机名还是IP地址(localhost)
