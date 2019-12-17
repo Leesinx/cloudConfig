@@ -1,0 +1,8 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: config-consumer
+eureka:
+  client:
+    service-url: http://localhost:8761/eureka/
